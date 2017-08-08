@@ -1,0 +1,10 @@
+server:
+  port: 7550
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7500/eureka/
+
+turbine:
+  app-config: ITEMINFO-SERVICE, PRODUCT-SERVER

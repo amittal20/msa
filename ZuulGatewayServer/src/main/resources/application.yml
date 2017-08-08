@@ -1,0 +1,25 @@
+zuul:
+#Service will be mapped under the /api URI
+  prefix: /api
+#  Uncomment to disable auto-registering all services read from Eureka
+  ignoredServices: '*'
+  routes:
+    test:
+      path: /redirect/**
+      url: http://wordpress.com/
+    item-info:
+      path: /item-info/**
+      serviceId: ITEMINFO-SERVICE
+    product:
+      path: /product/**
+      serviceId: PRODUCT-SERVER
+    item-review:
+      path: /item-review/**
+      serviceId: ITEMREVIEW-SERVICE  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7500/eureka/
+    
+server:
+  port: 7001

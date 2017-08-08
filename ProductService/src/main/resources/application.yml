@@ -1,0 +1,18 @@
+server:
+  port: 7520
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7500/eureka/
+  instance:
+    metadataMap:
+      cluster: MYCLUSTER     
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.niit: DEBUG
+
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+      
